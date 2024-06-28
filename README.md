@@ -40,10 +40,10 @@ cd sign_language_detection
 3. **Training:**
    Run the training script:
    ```bash
-   python models/research/object_detection/model_main_tf2.py \
-       --pipeline_config_path=models/research/object_detection/configs/<your_config_file>.config \
-       --model_dir=<path_to_save_training_checkpoints> \
-       --num_train_steps=<number_of_training_steps>
+   python Tensorflow/models/research/object_detection/model_main_tf2.py
+      --model_dir=Tensorflow/workspace/models/my_ssd_mobnet
+      --pipeline_config_path=Tensorflow/workspace/models/my_ssd_mobnet/pipeline.config
+      --num_train_steps=20000
    ```
 
 #### Converting to TensorFlow.js
@@ -51,11 +51,14 @@ cd sign_language_detection
 1. **Convert Model:**
    Convert the TensorFlow model to TensorFlow.js for deployment:
    ```bash
-   tensorflowjs_converter --input_format=tf_saved_model \
-                           --output_node_names='detection_boxes,detection_classes,detection_scores,num_detections' \
-                           --saved_model_tags=serve \
-                           <path_to_saved_model_directory> \
-                           <output_directory>
+    tensorflowjs_converter
+   --input_format=tf_saved_model
+   --output_node_names=
+   'detection_boxes,detection_classes,detection_features,detection_multiclass_scores,detection_scores,num_detections,raw_detection_boxes,raw_detection_scores'
+    --output_format=tfjs_graph_model
+   --signature_name=serving_default
+   Tensorflow/workspace/models/my_ssd_mobnet/export/saved_model
+   Tensorflow/workspace/models/my_ssd_mobnet/converted
    ```
 
 #### Deploying on IBM Cloud
