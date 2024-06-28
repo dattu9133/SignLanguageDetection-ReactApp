@@ -1,0 +1,26 @@
+<annotation>
+	<folder>nice</folder>
+	<filename>nice.e05f5c3c-6794-11ee-893c-34735ac46c3b.jpeg</filename>
+	<path>D:\RealTimeObjectDetection Demo\Tensorflow\workspace\images\collectedimages\nice\nice.e05f5c3c-6794-11ee-893c-34735ac46c3b.jpeg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>480</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Nice</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>67</xmin>
+			<ymin>120</ymin>
+			<xmax>271</xmax>
+			<ymax>407</ymax>
+		</bndbox>
+	</object>
+</annotation>
