@@ -11,7 +11,7 @@ This repository contains code and resources to build a sign language detection m
 
 #### Clone the Repository
 ```bash
-git clone <repository_url>
+git clone https://github.com/dattu9133/SignLanguageDetection-ReactApp
 cd sign_language_detection
 ```
 
